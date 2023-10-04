@@ -1,0 +1,271 @@
+html,
+body {
+    background-color: black;
+    overflow-x: clip;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monsterrat';
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 87.5%;
+    margin: 0 auto;
+}
+
+.active {
+    span {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+// Header
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+
+    .logo {
+        border: 1px solid #90FF03;
+        height: 100%;
+    }
+
+    a {
+        color: #90FF03;
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex: 1;
+        justify-content: center;
+        border: 1px solid #90FF03;
+        transition: .3s;
+
+        &:last-child {
+            margin-right: 10px;
+
+            &:hover {
+                background-color: #90FF03;
+                transition: .3s;
+                color: black;
+
+                svg {
+                    path {
+                        stroke: black;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background-color: #90FF03;
+            transition: .3s;
+            color: black;
+        }
+    }
+}
+
+.header-promo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url(../img/header-promo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    border-bottom: 1px solid #90FF03;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        height: 600px;
+
+        h1 {
+            position: relative;
+            z-index: 5;
+            color: #F2F2F2;
+            font-size: 3.4em;
+            font-weight: 700;
+            bottom: 0px;
+            align-self: flex-end;
+
+            button {
+                background-color: white;
+                color: black;
+                font-weight: 500;
+                font-size: 0.453em;
+                padding: 10px 30px;
+                position: absolute;
+                bottom: 5px;
+                right: 0px;
+                line-height: normal;
+                border: none;
+                border-radius: 28px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #90FF03;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+
+// main
+.about-us {
+    position: relative;
+    margin-top: 100px;
+
+    .about-us-head {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .about-us-box {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        top: 70px;
+
+        .diagrams-img {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0px 0px 50px;
+            gap: 50px;
+
+            h2 {
+                font-size: 28px;
+                color: #F2F2F2;
+                font-weight: 500;
+                width: fit-content;
+                align-self: flex-start;
+            }
+        }
+
+        .accordion-about-us {
+            width: 50%;
+
+            h1 {
+                font-size: 32px;
+                color: #90FF03;
+            }
+
+            .accordion {
+                margin: 50px auto;
+
+                .accordion-item {
+                    border: 1px solid #0066FF;
+                    .accordion-title {
+                        position: relative;
+                        cursor: pointer;
+                        background-color: transparent;
+                        padding: 20px;
+                        text-align: left;
+                        font-weight: bold;
+                        color: #F2F2F2;
+
+                        span {
+                            height: 3px;
+                            content: '';
+                            width: 30px;
+                            position: absolute;
+                            background-color: #F2F2F2;
+                            right: 20px;
+                            top: 28px;
+
+                            &::after {
+                                height: 3px;
+                                content: '';
+                                width: 30px;
+                                position: absolute;
+                                background-color: #F2F2F2;
+                                right: 0;
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+
+                    .accordion-content {
+                        display: none;
+                        transition: .3s;
+                        margin-bottom: 20px;
+                        color: #F2F2F2;
+                        padding: 20px;
+                        text-align: left;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+}
+
+.robots-rpa {
+    .bottom-line-about_us {
+        width: 100%;
+        height: 95.8px;
+        background-image: linear-gradient(90deg, #06F 32.27%, rgba(0, 0, 0, 0.00) 100%);
+        margin-top: 300px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .rpa-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+
+        .robots-bussines {
+            width: 30%;
+            padding-top: 50px;
+            position: relative;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 150px;
+
+            img {
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            p {
+                font-size: 1.3em;
+                font-weight: 500;
+                color: #F2F2F2;
+            }
+        }
+
+        .video-robots {
+            width: 50%;
+
+            h1 {
+                font-size: 32px;
+                color: #90FF03;
+                font-weight: 700;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,230 @@
+html,
+body {
+  background-color: black;
+  overflow-x: clip;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Monsterrat";
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.active span::after {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 63px;
+}
+.navbar .logo {
+  border: 1px solid #90FF03;
+  height: 100%;
+}
+.navbar a {
+  color: #90FF03;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  justify-content: center;
+  border: 1px solid #90FF03;
+  transition: 0.3s;
+}
+.navbar a:last-child {
+  margin-right: 10px;
+}
+.navbar a:last-child:hover {
+  background-color: #90FF03;
+  transition: 0.3s;
+  color: black;
+}
+.navbar a:last-child:hover svg path {
+  stroke: black;
+}
+.navbar a:hover {
+  background-color: #90FF03;
+  transition: 0.3s;
+  color: black;
+}
+
+.header-promo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url(../img/header-promo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  border-bottom: 1px solid #90FF03;
+}
+.header-promo .container {
+  display: flex;
+  justify-content: flex-end;
+  height: 600px;
+}
+.header-promo .container h1 {
+  position: relative;
+  z-index: 5;
+  color: #F2F2F2;
+  font-size: 3.4em;
+  font-weight: 700;
+  bottom: 0px;
+  align-self: flex-end;
+}
+.header-promo .container h1 button {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-size: 0.453em;
+  padding: 10px 30px;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  line-height: normal;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header-promo .container h1 button:hover {
+  background-color: #90FF03;
+  transition: 0.3s;
+}
+
+.about-us {
+  position: relative;
+  margin-top: 100px;
+}
+.about-us .about-us-head {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.about-us .about-us-box {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  top: 70px;
+}
+.about-us .about-us-box .diagrams-img {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px 0px 50px;
+  gap: 50px;
+}
+.about-us .about-us-box .diagrams-img h2 {
+  font-size: 28px;
+  color: #F2F2F2;
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-start;
+}
+.about-us .about-us-box .accordion-about-us {
+  width: 50%;
+}
+.about-us .about-us-box .accordion-about-us h1 {
+  font-size: 32px;
+  color: #90FF03;
+}
+.about-us .about-us-box .accordion-about-us .accordion {
+  margin: 50px auto;
+}
+.about-us .about-us-box .accordion-about-us .accordion .accordion-item {
+  border: 1px solid #0066FF;
+}
+.about-us .about-us-box .accordion-about-us .accordion .accordion-item .accordion-title {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #F2F2F2;
+}
+.about-us .about-us-box .accordion-about-us .accordion .accordion-item .accordion-title span {
+  height: 3px;
+  content: "";
+  width: 30px;
+  position: absolute;
+  background-color: #F2F2F2;
+  right: 20px;
+  top: 28px;
+}
+.about-us .about-us-box .accordion-about-us .accordion .accordion-item .accordion-title span::after {
+  height: 3px;
+  content: "";
+  width: 30px;
+  position: absolute;
+  background-color: #F2F2F2;
+  right: 0;
+  transform: rotate(90deg);
+}
+.about-us .about-us-box .accordion-about-us .accordion .accordion-item .accordion-content {
+  display: none;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  color: #F2F2F2;
+  padding: 20px;
+  text-align: left;
+}
+
+.robots-rpa .bottom-line-about_us {
+  width: 100%;
+  height: 95.8px;
+  background-image: linear-gradient(90deg, #06F 32.27%, rgba(0, 0, 0, 0) 100%);
+  margin-top: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.robots-rpa .rpa-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.robots-rpa .rpa-info .robots-bussines {
+  width: 30%;
+  padding-top: 50px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}
+.robots-rpa .rpa-info .robots-bussines img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.robots-rpa .rpa-info .robots-bussines p {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #F2F2F2;
+}
+.robots-rpa .rpa-info .video-robots {
+  width: 50%;
+}
+.robots-rpa .rpa-info .video-robots h1 {
+  font-size: 32px;
+  color: #90FF03;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}/*# sourceMappingURL=stye.css.map */
