@@ -7,6 +7,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  color: #F2F2F2;
   font-family: "Monsterrat";
   font-family: "Montserrat", sans-serif;
 }
@@ -77,7 +78,6 @@ body {
 .header-promo .container h1 {
   position: relative;
   z-index: 5;
-  color: #F2F2F2;
   font-size: 3.4em;
   font-weight: 700;
   bottom: 0px;
@@ -127,7 +127,6 @@ body {
 }
 .about-us .about-us-box .diagrams-img h2 {
   font-size: 28px;
-  color: #F2F2F2;
   font-weight: 500;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -154,7 +153,6 @@ body {
   padding: 20px;
   text-align: left;
   font-weight: bold;
-  color: #F2F2F2;
 }
 .about-us .about-us-box .accordion-about-us .accordion .accordion-item .accordion-title span {
   height: 3px;
@@ -178,11 +176,20 @@ body {
   display: none;
   transition: 0.3s;
   margin-bottom: 20px;
-  color: #F2F2F2;
   padding: 20px;
   text-align: left;
 }
 
+.robots-rpa {
+  z-index: 1;
+  position: relative;
+  height: 800px;
+}
+.robots-rpa .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .robots-rpa .bottom-line-about_us {
   width: 100%;
   height: 95.8px;
@@ -194,7 +201,9 @@ body {
 .robots-rpa .rpa-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  top: 100px;
+  position: relative;
+  z-index: 100;
 }
 .robots-rpa .rpa-info .robots-bussines {
   width: 30%;
@@ -216,7 +225,6 @@ body {
 .robots-rpa .rpa-info .robots-bussines p {
   font-size: 1.3em;
   font-weight: 500;
-  color: #F2F2F2;
 }
 .robots-rpa .rpa-info .video-robots {
   width: 50%;
@@ -227,4 +235,99 @@ body {
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
+}
+.robots-rpa .rpa-bottom {
+  position: relative;
+  top: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.robots-rpa .rpa-bottom .plus {
+  content: "";
+  height: 5px;
+  width: 56px;
+  position: absolute;
+  background-color: #90FF03;
+  border-radius: 3px;
+  right: 0;
+}
+.robots-rpa .rpa-bottom .plus:nth-child(2) {
+  left: 0;
+}
+.robots-rpa .rpa-bottom .plus::after {
+  content: "";
+  height: 5px;
+  width: 56px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #90FF03;
+  transform: rotate(90deg);
+}
+.robots-rpa .rpa-bottom .line {
+  height: 3px;
+  background-color: #F2F2F2;
+  width: 90%;
+}
+
+.examples {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.examples .short-about_robots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.examples .short-about_robots::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 0;
+}
+.examples .short-about_robots svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.examples .short-about_robots h2 {
+  z-index: 10;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.examples h1 {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: #90FF03;
+}
+.examples .card-block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(2, 49%);
+  margin: 0 auto;
+}
+.examples .card-block .card {
+  display: flex;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background-color: #F2F2F2;
+}
+.examples .card-block .back {
+  position: absolute;
+  width: 100%;
 }/*# sourceMappingURL=stye.css.map */

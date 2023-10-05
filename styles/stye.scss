@@ -7,6 +7,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    color: #F2F2F2;
     font-family: 'Monsterrat';
     font-family: 'Montserrat', sans-serif;
 }
@@ -90,7 +91,6 @@ body {
         h1 {
             position: relative;
             z-index: 5;
-            color: #F2F2F2;
             font-size: 3.4em;
             font-weight: 700;
             bottom: 0px;
@@ -146,7 +146,6 @@ body {
 
             h2 {
                 font-size: 28px;
-                color: #F2F2F2;
                 font-weight: 500;
                 width: fit-content;
                 align-self: flex-start;
@@ -166,6 +165,7 @@ body {
 
                 .accordion-item {
                     border: 1px solid #0066FF;
+
                     .accordion-title {
                         position: relative;
                         cursor: pointer;
@@ -173,7 +173,6 @@ body {
                         padding: 20px;
                         text-align: left;
                         font-weight: bold;
-                        color: #F2F2F2;
 
                         span {
                             height: 3px;
@@ -200,7 +199,6 @@ body {
                         display: none;
                         transition: .3s;
                         margin-bottom: 20px;
-                        color: #F2F2F2;
                         padding: 20px;
                         text-align: left;
                     }
@@ -215,6 +213,16 @@ body {
 }
 
 .robots-rpa {
+    z-index: 1;
+    position: relative;
+    height: 800px;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
     .bottom-line-about_us {
         width: 100%;
         height: 95.8px;
@@ -228,7 +236,9 @@ body {
     .rpa-info {
         display: flex;
         justify-content: space-between;
-        margin-top: 100px;
+        top: 100px;
+        position: relative;
+        z-index: 100;
 
         .robots-bussines {
             width: 30%;
@@ -251,7 +261,6 @@ body {
             p {
                 font-size: 1.3em;
                 font-weight: 500;
-                color: #F2F2F2;
             }
         }
 
@@ -268,4 +277,107 @@ body {
         }
     }
 
+    .rpa-bottom {
+        position: relative;
+        top: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .plus {
+            content: '';
+            height: 5px;
+            width: 56px;
+            position: absolute;
+            background-color: #90FF03;
+            border-radius: 3px;
+            right: 0;
+
+            &:nth-child(2) {
+                left: 0;
+            }
+
+            &::after {
+                content: '';
+                height: 5px;
+                width: 56px;
+                border-radius: 3px;
+                position: absolute;
+                background-color: #90FF03;
+                transform: rotate(90deg);
+            }
+        }
+
+        .line {
+            height: 3px;
+            background-color: #F2F2F2;
+            width: 90%;
+        }
+    }
+
+}
+
+.examples {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .short-about_robots {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: '';
+            width: 0;
+            position: absolute;
+            height: 0;
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            
+        }
+
+        h2 {
+            z-index: 10;
+            font-size: 1.1em;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    h1 {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        color: #90FF03;
+    }
+    .card-block{
+        width: 100%;
+        display: grid;  
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(2, 49%);
+        margin: 0 auto  ;
+        .card{
+            display: flex;
+            backdrop-filter: blur(4px);
+            background-color: #F2F2F2;
+        }
+        .back{
+            position: absolute;
+            width: 100%;
+        }
+    }
 }
