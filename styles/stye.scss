@@ -324,7 +324,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     .short-about_robots {
         position: absolute;
         left: 0;
@@ -335,18 +334,20 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        &::before{
+
+        &::before {
             content: '';
             width: 0;
             position: absolute;
             height: 0;
         }
+
         svg {
             position: absolute;
             left: 0;
             top: 0;
             height: 100%;
-            
+
         }
 
         h2 {
@@ -364,20 +365,61 @@ body {
         line-height: 120%;
         color: #90FF03;
     }
-    .card-block{
+    .back {
+        position: absolute;
         width: 100%;
-        display: grid;  
+        top: 0;
+    }
+    .card-block {
+        width: 100%;
+        display: grid;
+        height: 300px;
         grid-template-columns: repeat(3, 33%);
         grid-template-rows: repeat(2, 49%);
-        margin: 0 auto  ;
-        .card{
+        position: relative;
+        top: 200px;
+        column-gap: 30px;
+        row-gap: 70px;
+        .card {
             display: flex;
-            backdrop-filter: blur(4px);
-            background-color: #F2F2F2;
+            align-items: flex-start;
+            position: relative;
+            cursor: pointer;
+            gap: 20px;
+            img{
+                width: 20%;
+            }
+            .card-box {
+                position: relative;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                &:hover{
+                    p{
+                        color: black;
+                        font-weight: 700;
+                        transition: .4s;
+                    }
+                    svg{
+                        transition: .4s;
+                        fill: #90FF03;
+                    }
+                }
+                svg {
+                    width: 100%;
+                    position: absolute;
+                    transition: .3s;
+                }
+
+                p {
+                    margin: 0 auto;
+                    z-index: 1;
+                    transition: .3s;
+                }
+            }
         }
-        .back{
-            position: absolute;
-            width: 100%;
-        }
+
+       
     }
 }

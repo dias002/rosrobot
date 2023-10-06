@@ -314,20 +314,56 @@ body {
   line-height: 120%;
   color: #90FF03;
 }
+.examples .back {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
 .examples .card-block {
   width: 100%;
   display: grid;
+  height: 300px;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(2, 49%);
-  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 70px;
 }
 .examples .card-block .card {
   display: flex;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  background-color: #F2F2F2;
+  align-items: flex-start;
+  position: relative;
+  cursor: pointer;
+  gap: 20px;
 }
-.examples .card-block .back {
-  position: absolute;
+.examples .card-block .card img {
+  width: 20%;
+}
+.examples .card-block .card .card-box {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.examples .card-block .card .card-box:hover p {
+  color: black;
+  font-weight: 700;
+  transition: 0.4s;
+}
+.examples .card-block .card .card-box:hover svg {
+  transition: 0.4s;
+  fill: #90FF03;
+}
+.examples .card-block .card .card-box svg {
   width: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+.examples .card-block .card .card-box p {
+  margin: 0 auto;
+  z-index: 1;
+  transition: 0.3s;
 }/*# sourceMappingURL=stye.css.map */
