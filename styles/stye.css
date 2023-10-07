@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 87.5%;
+  width: 88%;
   margin: 0 auto;
 }
 
@@ -366,4 +366,98 @@ body {
   margin: 0 auto;
   z-index: 1;
   transition: 0.3s;
+}
+
+.application {
+  margin-top: 450px;
+  display: flex;
+  align-items: center;
+}
+.application .application-info {
+  position: relative;
+  width: 40%;
+}
+.application .application-info .title {
+  position: relative;
+  height: 150px;
+  margin: 100px auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.application .application-info .title svg {
+  position: absolute;
+  top: 0;
+}
+.application .application-info .title h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+}
+.application .application-info .subtitle p {
+  color: #06F;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 500;
+}
+.application .application-info .subtitle ul {
+  width: 100%;
+}
+.application .application-info .subtitle ul li {
+  margin: 20px auto;
+  width: 90%;
+}
+.application .application-form {
+  width: 70%;
+}
+.application .application-form h1 {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 42px */
+  text-transform: uppercase;
+  color: #90FF03;
+}
+.application .application-form .form-block {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  margin-top: 100px;
+}
+.application .application-form .form-block form {
+  width: 50%;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  padding: 10% 2%;
+  gap: 20px;
+}
+.application .application-form .form-block form input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #0F0F0F;
+  outline: none;
+  color: #9E9E9E;
+}
+.application .application-form .form-block form button {
+  color: #0F0F0F;
+  background-color: #9E9E9E;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.application .application-form .form-block form button:hover {
+  transition: 0.3s;
+  background-color: #90FF03;
+}
+.application .application-form .form-block form p {
+  color: #0F0F0F;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.application .application-form .form-block img {
+  width: 50%;
 }/*# sourceMappingURL=stye.css.map */

@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    width: 87.5%;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -380,6 +380,7 @@ body {
         top: 200px;
         column-gap: 30px;
         row-gap: 70px;
+
         .card {
             display: flex;
             align-items: flex-start;
@@ -419,7 +420,102 @@ body {
                 }
             }
         }
+    }
+}
 
-       
+.application{
+    margin-top:450px ;
+    display: flex;
+    align-items: center;
+    .application-info{
+        position: relative;
+        width: 40%;
+        .title{
+            position: relative;
+            height: 150px;
+            margin: 100px auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            svg{
+                position: absolute;
+                top: 0;
+            }
+            h2{
+                text-transform: uppercase;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+        .subtitle{
+            p{
+                color: #06F;
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 500;
+            }
+            ul{
+                width: 100%;
+                li{
+                    margin: 20px auto;
+                    width: 90%;
+                }
+            }
+        }
+    }
+    .application-form{
+        width: 70%;
+        h1{
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 42px */
+            text-transform: uppercase;
+            color: #90FF03;
+        }
+        .form-block{
+            display: flex;
+            width: 100%;
+            align-self: center;
+            margin-top: 100px;
+            form{
+                width: 50%;
+                background-color: #F2F2F2;
+                display: flex;
+                flex-direction: column;
+                padding: 10% 2%;
+                gap: 20px;
+                input{
+                    border: none ;  
+                    background-color: transparent;
+                    border-bottom: 1px solid #0F0F0F;
+                    outline: none;
+                    color:#9E9E9E ;
+                }
+                button{
+                    color: #0F0F0F;
+                    background-color: #9E9E9E;
+                    border: none;
+                    height: 40px;
+                    cursor: pointer;
+                    transition: .3s;
+                    &:hover{
+                        transition: .3s;
+                        background-color: #90FF03;
+
+                    }
+                }
+                p{
+                    color: #0F0F0F;
+                    font-size: 14px;
+                    text-decoration: underline;
+                }
+            }
+            img{
+                width: 50%;
+            }
+        }
     }
 }
