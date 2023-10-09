@@ -23,3 +23,13 @@ accordionItems.forEach(item => {
         }
     });
 });
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  const scrollToTopButton = document.querySelector('.btn-top-arrow');
+
+  scrollToTopButton.addEventListener('click', scrollToTop);
