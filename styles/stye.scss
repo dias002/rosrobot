@@ -16,6 +16,11 @@ body {
     width: 88%;
     margin: 0 auto;
 }
+@media (max-width:1024px) {
+    .container{
+        width: 90%;
+    }
+}
 
 .active {
     span {
@@ -78,11 +83,23 @@ h1 {
         }
     }
 }
+@media (max-width:1024px) {
+    .navbar{
+        width: 100%;
+        a{
+            &:last-child{
+                margin-right: 0;
+               #text{
+                width: fit-content;
+               }
+            }
+        }
+    }
+}
 
 .header-promo {
     position: relative;
     width: 100%;
-    height: auto;
     background-image: url(../img/header-promo.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,9 +109,10 @@ h1 {
     .container {
         display: flex;
         justify-content: flex-end;
-        height: 600px;
+        height: 100%;
 
         h1 {
+            color: #F2F2F2;
             position: relative;
             z-index: 5;
             font-size: 2.9em;
@@ -313,6 +331,18 @@ h1 {
     }
 
 }
+@media (max-width:1024px) {
+    .robots-rpa {
+        .rpa-info{
+            .robots-bussines{
+                width: 45%;
+            }
+            .video-robots{
+                text-align: center;
+            }
+        }
+    }
+}
 
 .examples {
     position: relative;
@@ -340,7 +370,6 @@ h1 {
 
         svg {
             position: absolute;
-            left: 0;
             top: 0;
             height: 100%;
 
@@ -417,16 +446,28 @@ h1 {
         }
     }
 }
-
+@media (max-width:1024px) {
+    .examples{  
+       align-items: flex-end;
+       text-align: right;
+       p{
+        text-align: center;
+       }
+       .card-block{
+            column-gap: 0;
+            .card{
+                gap: 10px;
+            }
+       }
+    }
+}
 .application {
     height: 500px;
     margin-top: 450px;
 
     .application-box {
         display: flex;
-        height: 100%;
         align-items: center;
-
         .application-info {
             position: relative;
             width: 40%;
@@ -548,7 +589,7 @@ h1 {
         }
 
     }
-
+    
     .lines {
         margin-top: 100px;
 
@@ -642,7 +683,45 @@ h1 {
         }
     }
 }
+@media (max-width:1024px) {
+    .application{
+        width: 95%;
+        .application-box{
+            align-items: flex-end;
+            .application-form{
+                text-align: center;
+                height: 100%;
+                img{
+                    display: none;
+                }
+                .form-block{
+                    justify-content: center;
+                    form{
+                        width: 80%;
+                        padding: 50px 30px;
+                        border: #06F 4px solid;
+                        border-radius: 40px;
+                        input{
+                            padding: 20px 0;
+                            font-size: 20px;
+                        }
+                        #radio-btn{
+                            padding: 0;
+                            width: 30px;
+                            height: 30px;
+                        }
+                        button{
+                            border-radius: 30px;
+                            height: 50px;
+                        }
+                    }
+                }
 
+            }
+        }
+    }
+    
+}
 .robots-benefits {
     height: 900px;
     position: relative;
@@ -883,6 +962,19 @@ h1 {
             }
         }
 }
+@media (max-width:1024px){
+    .free-workers{
+        .workers-title{
+            width: auto;
+        }
+        .cards{
+            flex-wrap: wrap;
+            .card{
+                text-align: center;
+            }
+        }
+    }
+}
 // footer
 footer{
     .application{
@@ -939,6 +1031,15 @@ footer{
             }
         }
     }
+    @media (max-width:1024px) {
+        .application{
+            .application-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
     .footer-links{
         border-top: 1px solid #90FF03;
         height: 450px;
@@ -978,6 +1079,16 @@ footer{
                 bottom: 0;
                 text-decoration: none;
             }
+        }
+    }
+    @media (max-width:1024px){
+        .footer-links{
+            .container{
+                .links{
+                    width: auto;
+                }
+            }
+
         }
     }
 }

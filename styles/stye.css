@@ -18,6 +18,11 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
 .active span::after {
   display: none;
 }
@@ -69,10 +74,22 @@ h1 {
   color: black;
 }
 
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar a:last-child {
+    margin-right: 0;
+  }
+  .navbar a:last-child #text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .header-promo {
   position: relative;
   width: 100%;
-  height: auto;
   background-image: url(../img/header-promo.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,9 +99,10 @@ h1 {
 .header-promo .container {
   display: flex;
   justify-content: flex-end;
-  height: 600px;
+  height: 100%;
 }
 .header-promo .container h1 {
+  color: #F2F2F2;
   position: relative;
   z-index: 5;
   font-size: 2.9em;
@@ -270,6 +288,14 @@ h1 {
   width: 90%;
 }
 
+@media (max-width: 1024px) {
+  .robots-rpa .rpa-info .robots-bussines {
+    width: 45%;
+  }
+  .robots-rpa .rpa-info .video-robots {
+    text-align: center;
+  }
+}
 .examples {
   position: relative;
   display: flex;
@@ -295,7 +321,6 @@ h1 {
 }
 .examples .short-about_robots svg {
   position: absolute;
-  left: 0;
   top: 0;
   height: 100%;
 }
@@ -359,13 +384,28 @@ h1 {
   transition: 0.3s;
 }
 
+@media (max-width: 1024px) {
+  .examples {
+    align-items: flex-end;
+    text-align: right;
+  }
+  .examples p {
+    text-align: center;
+  }
+  .examples .card-block {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .examples .card-block .card {
+    gap: 10px;
+  }
+}
 .application {
   height: 500px;
   margin-top: 450px;
 }
 .application .application-box {
   display: flex;
-  height: 100%;
   align-items: center;
 }
 .application .application-box .application-info {
@@ -582,6 +622,43 @@ h1 {
   }
 }
 
+@media (max-width: 1024px) {
+  .application {
+    width: 95%;
+  }
+  .application .application-box {
+    align-items: flex-end;
+  }
+  .application .application-box .application-form {
+    text-align: center;
+    height: 100%;
+  }
+  .application .application-box .application-form img {
+    display: none;
+  }
+  .application .application-box .application-form .form-block {
+    justify-content: center;
+  }
+  .application .application-box .application-form .form-block form {
+    width: 80%;
+    padding: 50px 30px;
+    border: #06F 4px solid;
+    border-radius: 40px;
+  }
+  .application .application-box .application-form .form-block form input {
+    padding: 20px 0;
+    font-size: 20px;
+  }
+  .application .application-box .application-form .form-block form #radio-btn {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+  }
+  .application .application-box .application-form .form-block form button {
+    border-radius: 30px;
+    height: 50px;
+  }
+}
 .robots-benefits {
   height: 900px;
   position: relative;
@@ -839,6 +916,17 @@ h1 {
   border-left: none;
 }
 
+@media (max-width: 1024px) {
+  .free-workers .workers-title {
+    width: auto;
+  }
+  .free-workers .cards {
+    flex-wrap: wrap;
+  }
+  .free-workers .cards .card {
+    text-align: center;
+  }
+}
 footer .application {
   position: relative;
 }
@@ -891,6 +979,13 @@ footer .application .btn-top-arrow:hover {
 footer .application .btn-top-arrow:hover svg path {
   stroke: black;
 }
+@media (max-width: 1024px) {
+  footer .application .application-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 footer .footer-links {
   border-top: 1px solid #90FF03;
   height: 450px;
@@ -933,4 +1028,9 @@ footer .footer-links .container .policy {
   position: absolute;
   bottom: 0;
   text-decoration: none;
+}
+@media (max-width: 1024px) {
+  footer .footer-links .container .links {
+    width: auto;
+  }
 }/*# sourceMappingURL=stye.css.map */
