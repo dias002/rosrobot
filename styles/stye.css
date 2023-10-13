@@ -311,7 +311,7 @@ h1 {
   width: 50%;
 }
 .robots-rpa .rpa-info .video-robots video {
-  width: 100%;
+  width: 90%;
   margin: 50px auto;
 }
 .robots-rpa .rpa-bottom {
@@ -1328,7 +1328,7 @@ footer .footer-links .container .policy {
   }
   .header-promo .container h1 {
     bottom: -60px;
-    font-size: 23px;
+    font-size: 20px;
   }
   .header-promo .container h1 button {
     left: 50%;
