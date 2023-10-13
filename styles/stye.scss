@@ -340,12 +340,16 @@ h1 {
 
         .video-robots {
             width: 50%;
+            video{
+                width: 100%;
+                margin: 50px auto;
+            }
         }
     }
 
     .rpa-bottom {
-        position: relative;
-        top: 300px;
+        position: absolute;
+        bottom: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1206,6 +1210,9 @@ footer{
             align-items: center;
             .application-form{
                 width: 100%;
+                h1{
+                    display: none;
+                }
                 .form-block{
                     width: 100%;
                     form{
@@ -1450,6 +1457,7 @@ footer{
     .application{
         .application-box{
             .application-form{
+
                 .form-block{
                     form{
                         display: flex;

@@ -310,9 +310,13 @@ h1 {
 .robots-rpa .rpa-info .video-robots {
   width: 50%;
 }
+.robots-rpa .rpa-info .video-robots video {
+  width: 100%;
+  margin: 50px auto;
+}
 .robots-rpa .rpa-bottom {
-  position: relative;
-  top: 300px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1157,6 +1161,9 @@ footer .footer-links .container .policy {
   }
   .application .application-box .application-form {
     width: 100%;
+  }
+  .application .application-box .application-form h1 {
+    display: none;
   }
   .application .application-box .application-form .form-block {
     width: 100%;
