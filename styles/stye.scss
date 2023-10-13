@@ -8,24 +8,38 @@ body {
     margin: 0;
     padding: 0;
     color: #F2F2F2;
-    font-family: 'Monsterrat';
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
-
 .container {
     width: 88%;
     margin: 0 auto;
 }
-@media (max-width:1024px) {
-    .container{
-        width: 90%;
-    }
-}
-
 .active {
     span {
         &::after {
             display: none;
+        }
+    }
+}
+.active-burger{
+    transform: translateX(0)!important;
+    display: block;
+    transition: .4s;
+    span{
+        transition: .4s;
+        &:nth-child(2){
+            display: none;
+        }
+        &:nth-child(3){
+            transform: rotate(39deg);
+            height: 5px;
+            border-radius: 3px;
+        }
+        &:nth-child(1){
+            transform: rotate(317deg);
+            height: 5px;
+            border-radius: 3px;
         }
     }
 }
@@ -83,27 +97,67 @@ h1 {
         }
     }
 }
-@media (max-width:1024px) {
-    .navbar{
-        width: 100%;
-        a{
-            &:last-child{
-                margin-right: 0;
-               #text{
-                width: fit-content;
-               }
-            }
+.burger-btn{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 40;
+    span{
+        transition: .4s;
+        width: 50px;
+        height: 2px;
+        background-color: #90FF03;
+        border-radius: 1px;
+        position: absolute;
+        &:nth-child(2){
+            top: 15px;
+        }
+        &:nth-child(3){
+            top: 30px;
         }
     }
 }
 
+.menu-content{
+    transform: translate(100%);
+    width: 65%;
+    background-color: #000;
+    height: 100%;
+    transition: .4s;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    .content-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-left: 3px solid #90FF03;
+        a{
+            text-decoration: none;
+            color: #90FF03;
+            font-weight: 700;
+            font-size: 23px;
+            border-bottom: solid 1px #90FF03;
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
 .header-promo {
     position: relative;
     width: 100%;
     background-image: url(../img/header-promo.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 80vh;
     border-bottom: 1px solid #90FF03;
 
     .container {
@@ -236,8 +290,7 @@ h1 {
 .robots-rpa {
     z-index: 1;
     position: relative;
-    height: 800px;
-
+    height: 100vh;
     .background {
         position: absolute;
         width: 100%;
@@ -331,25 +384,15 @@ h1 {
     }
 
 }
-@media (max-width:1024px) {
-    .robots-rpa {
-        .rpa-info{
-            .robots-bussines{
-                width: 45%;
-            }
-            .video-robots{
-                text-align: center;
-            }
-        }
-    }
-}
 
 .examples {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: 100vh;
+    margin-top: 100px;
+    justify-content: space-between;
     .short-about_robots {
         position: absolute;
         left: 0;
@@ -372,7 +415,6 @@ h1 {
             position: absolute;
             top: 0;
             height: 100%;
-
         }
 
         h2 {
@@ -392,21 +434,15 @@ h1 {
     .card-block {
         width: 100%;
         display: grid;
-        height: 300px;
         grid-template-columns: repeat(3, 33%);
         grid-template-rows: repeat(2, 49%);
-        position: relative;
-        top: 200px;
-        column-gap: 30px;
         row-gap: 70px;
-
+        height: 60%;
         .card {
             display: flex;
             align-items: flex-start;
-            position: relative;
             cursor: pointer;
             gap: 20px;
-
             img {
                 width: 20%;
             }
@@ -446,35 +482,20 @@ h1 {
         }
     }
 }
-@media (max-width:1024px) {
-    .examples{  
-       align-items: flex-end;
-       text-align: right;
-       p{
-        text-align: center;
-       }
-       .card-block{
-            column-gap: 0;
-            .card{
-                gap: 10px;
-            }
-       }
-    }
-}
 .application {
-    height: 500px;
-    margin-top: 450px;
-
+    height: 90vh;
+    margin-top: 100px;
     .application-box {
         display: flex;
         align-items: center;
         .application-info {
             position: relative;
             width: 40%;
-
+            display: flex;
+            flex-direction: column;
             .title {
                 position: relative;
-                height: 150px;
+                height: 18vh;
                 margin: 100px auto;
                 align-items: center;
                 display: flex;
@@ -517,18 +538,13 @@ h1 {
             width: 60%;
             .form-block {
                 display: flex;
-                width: 100%;
-                align-self: center;
                 margin-top: 50px;
-
                 form {
                     width: 50%;
                     background-color: #F2F2F2;
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
                     padding: 10% 2%;
                     gap: 20px;
-
                     input {
                         border: none;
                         background-color: transparent;
@@ -536,7 +552,6 @@ h1 {
                         outline: none;
                         color: #9E9E9E;
                     }
-
                     button {
                         color: #0F0F0F;
                         background-color: #9E9E9E;
@@ -591,8 +606,6 @@ h1 {
     }
     
     .lines {
-        margin-top: 100px;
-
         .line {
             width: 100%;
             height: 10px;
@@ -683,54 +696,13 @@ h1 {
         }
     }
 }
-@media (max-width:1024px) {
-    .application{
-        width: 95%;
-        .application-box{
-            align-items: flex-end;
-            .application-form{
-                text-align: center;
-                height: 100%;
-                img{
-                    display: none;
-                }
-                .form-block{
-                    justify-content: center;
-                    form{
-                        width: 80%;
-                        padding: 50px 30px;
-                        border: #06F 4px solid;
-                        border-radius: 40px;
-                        input{
-                            padding: 20px 0;
-                            font-size: 20px;
-                        }
-                        #radio-btn{
-                            padding: 0;
-                            width: 30px;
-                            height: 30px;
-                        }
-                        button{
-                            border-radius: 30px;
-                            height: 50px;
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-    
-}
 .robots-benefits {
-    height: 900px;
     position: relative;
-    top: 350px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     .benefits-diagrams {
         width: 35%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -755,7 +727,7 @@ h1 {
         }
 
         .diagram1 {
-            height: 300px;
+            height: 15vh;
             display: flex;
             align-items: center;
             width: 100%;
@@ -820,7 +792,7 @@ h1 {
                     margin-bottom: 10px;
                 }
                 p{
-                    width: 100%; /* Удалите второе упоминание width */
+                    width: 100%; 
                     padding: 20px;
                     position: relative;
                     background-image: linear-gradient(90deg, rgba(0, 102, 255, 0.66) 32.27%, rgba(0, 0, 0, 0.00) 100%);
@@ -847,8 +819,8 @@ h1 {
 
                 }
                 &:last-child{
-                    width: 110%;
-                    height: 200px;
+                    width: 100%;
+
                     img{
                         height: 100%;
                         width: 100%;
@@ -861,10 +833,9 @@ h1 {
 }
 .free-workers{
     position: relative;
-    top: 400px;
     height: auto;
     padding-top: 70px;
-    height: 700px;
+    height: 90vh;
         .border{
             position: absolute;
             width: 100%;
@@ -906,7 +877,7 @@ h1 {
             width: 100%;
             margin-top: 100px;
             .card{
-                height: 250px;
+                height: 30vh;
                 width: 32%;
                 align-items: center;
                 flex-direction: column;
@@ -962,29 +933,18 @@ h1 {
             }
         }
 }
-@media (max-width:1024px){
-    .free-workers{
-        .workers-title{
-            width: auto;
-        }
-        .cards{
-            flex-wrap: wrap;
-            .card{
-                text-align: center;
-            }
-        }
-    }
-}
 // footer
 footer{
-    .application{
+    .footer-application{
         position: relative;
+        padding: 150px 0;
         .application-box{
             background-color: rgba(242, 242, 242, 1);
             width: 100%;
-            height: 380px;
+            padding: 100px 50px;
             text-align: center;
             display: flex;
+            align-items: center;
             flex-direction: column;
             justify-content: center;
             h2{
@@ -1042,7 +1002,7 @@ footer{
     }
     .footer-links{
         border-top: 1px solid #90FF03;
-        height: 450px;
+        height: 40vh;
         display: flex;
         align-items: center;
         .container{
@@ -1091,4 +1051,497 @@ footer{
 
         }
     }
+}
+@media (max-width:1024px){
+    .free-workers{
+        .workers-title{
+            width: auto;
+        }
+        .cards{
+            flex-wrap: wrap;
+            .card{
+                text-align: center;
+            }
+        }
+    }
+    .application{
+        width: 95%;
+        .application-box{
+            align-items: flex-end;
+            .application-form{
+                text-align: center;
+                img{
+                    display: none;
+                }
+                .form-block{
+                    justify-content: center;
+                    form{
+                        width: 80%;
+                        padding: 50px 30px;
+                        border: #06F 4px solid;
+                        border-radius: 40px;
+                        input{
+                            padding: 20px 0;
+                            font-size: 20px;
+                        }
+                        #radio-btn{
+                            padding: 0;
+                            width: 30px;
+                            height: 30px;
+                        }
+                        button{
+                            border-radius: 30px;
+                            height: 50px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+     .examples{  
+       align-items: flex-end;
+       text-align: right;
+       p{
+        text-align: center;
+       }
+       .card-block{
+            column-gap: 0;
+            .card{
+                gap: 10px;
+            }
+       }
+    }
+    .robots-rpa {
+        .rpa-info{
+            .robots-bussines{
+                width: 45%;
+            }
+            .video-robots{
+                text-align: center;
+            }
+        }
+    }
+    .container{
+        width: 90%;
+    }
+     .navbar{
+        width: 100%;
+        a{
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    
+}
+
+@media (max-width:768px){
+    .about-us{
+        margin-top: 170px;
+        .about-us-box{
+           display: grid;
+           grid-template-columns: 100%;
+           gap: 20px;
+            .diagrams-img{
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                width: 100%;
+                gap: 10px;
+                h2{
+                    position: absolute;
+                }
+                img{
+                    margin-top: 100px;
+                    width: 50%;
+                }
+            }
+            .accordion-about-us{
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .header-promo {
+        height: 50vh;
+        .container{
+            width: 95%;
+            justify-content: center;
+            h1{
+                bottom: -100px;
+                font-size: 35px;
+                button{
+                    bottom: 0;
+                }
+            }
+        }
+
+    }
+    .robots-rpa{
+        height: 100vh;
+        .bottom-line-about_us{
+            margin-top: 200px;
+        }
+    }
+    .examples {
+        margin-top: 100px;
+        height: auto;
+        .short-about_robots{
+            text-align: center;
+        }
+        .card-block{
+            grid-template-columns: repeat(2, 49%);
+            grid-template-rows: 1fr 1fr 1fr ;
+            margin-top: 200px;
+            row-gap: 150px;
+
+        }
+    }
+    .application{
+        margin-top: 350px;
+        width: 100%;
+        .application-box{
+            flex-direction: column;
+            align-items: center;
+            .application-form{
+                width: 100%;
+                .form-block{
+                    width: 100%;
+                    form{
+                        width: 100%;
+                        height: fit-content;
+                        display: grid;
+                        grid-template-areas:'b b'
+                                            'c c';
+                        align-items: center;
+                        button{
+                            margin-top: 30px;
+                        }
+                       }
+                }
+               
+            }
+            .application-info{
+                width: 100%;
+                height: auto;
+                .subtitle{
+                    width: 70%;
+                    text-align: center;
+                    padding: 30px 0;
+                    border-radius: 5px;
+                    ul{
+                        list-style-type: none;
+                    }
+                    margin: 0 auto;
+                    border: 2px solid #F2F2F2;
+                }
+                .title{
+                    display: none;
+                }
+            }
+        }
+    }
+    .navbar{
+        a{
+             display: none;
+        }
+        .logo{
+         border: none;
+        }
+    }
+    .burger-btn{
+        display: block;
+    }
+    .robots-benefits{
+        height: auto;
+        top: 200px;
+        flex-direction: column;
+        .benefits-diagrams{
+            width: 100%;
+            margin-top: 100px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .diagram2{
+                display: none;
+            }
+        }
+        .benefits-cards{
+            z-index: 100;
+            height: auto;
+            width: 100%;
+        }
+    }
+    .free-workers{
+        margin-top: 100px;
+        .workers-title{
+            text-align: center;
+            flex-direction: column-reverse;
+        }
+        .cards {
+            display: grid;
+            grid-template-areas: 
+              'A A' 
+              'B B';
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            gap: 10px;
+            row-gap: 30px;
+            .card {
+             width: 100%;
+              &:nth-child(2) {
+                grid-area: B;
+                width: 60%;
+                margin: 0 auto;
+              }
+            }
+          }
+    }
+    footer{
+        .footer-links{
+            height: auto;
+            .container{
+                flex-direction: column;
+                padding-bottom: 100px;
+                .links{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+@media (max-height:600px){
+    .application{
+        margin-top: 200px;
+        .application-box{
+            width: 100%;
+            justify-content: space-between;
+            .application-form{
+                align-items: center;
+                display: flex;
+                h1{
+                    display: none;
+                }
+                .form-block{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    height: 70%;
+                }
+            }
+        }
+    }
+    .robots-benefits{
+        height: auto;
+        position: unset;
+        margin-top: 200px;
+        .benefits-cards{
+            height: 80%;
+            flex-direction: column;
+            justify-content: space-around;
+            display: flex;
+            h1{
+                margin-bottom: 0;
+            }
+            .card-box{
+                margin-top: 0;
+                row-gap: 20px;
+                align-content: stretch;
+                grid-template-rows: 1fr 1fr 1fr;
+                .card{
+                    width: 100%;
+                    height: 100%;
+                    p{
+                        padding: 0;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .free-workers{
+        padding: 70px 0px;
+        height: auto;
+    }
+}
+
+@media (max-width:425px){
+    .container{
+        width: 100%;
+    }
+    .menu-content{
+        width: 100%;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .header-promo{
+      .container{
+        h1{
+            bottom: -60px;
+            font-size: 23px;
+            button{
+                left: 50%;
+                transform: translate(-50%, 0);
+                bottom: -70px;
+                font-weight: 500;
+                width: 70%;
+                font-size: 23px;
+                padding: 10px 0;
+            }
+        }
+      }
+    }
+    .about-us {
+        .about-us-box{
+            flex-direction: column-reverse;
+            display: flex;
+            .diagrams-img{
+                display: grid;
+                img{
+                    width: 90%;
+                    margin: 50px auto;
+                }
+            }
+            .accordion-about-us{
+                text-align: center;
+                .accordion-title{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .robots-rpa{
+        .rpa-info{ 
+            width: 100%;
+            .robots-bussines{
+                display: none;
+            }
+            .video-robots{
+                width: 100%;
+            }
+        }
+
+    }
+    .examples{
+        align-items: center;
+        h1{
+            text-align: center;
+        }
+        .short-about_robots{
+            display: none;
+        }
+        .back{
+            display: none;
+        }
+        .card-block{
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            .card{
+                flex-direction: row-reverse;
+                width: 100%;
+            }
+        }
+    }
+    .application{
+        .application-box{
+            .application-form{
+                .form-block{
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        input{
+                            width: 100%;
+                        }
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .application-info{
+                .subtitle{
+                    width: 95%;
+                }
+            }
+        }
+        .lines{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .robots-benefits{
+        margin-top: 350px;
+        .benefits-cards{
+            width: 90%;
+            .card-box{
+                display: flex;
+                flex-direction: column;
+                .card{
+
+                    margin: 0 auto;
+                    p{
+                        height: 70px;
+                        padding: 0 20px;
+                        text-align: left;
+                    }
+
+                }
+            }
+        }
+    }
+    .free-workers{
+        .container{
+            .cards{
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                .card{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer{
+        .footer-application{
+            .application-box{
+                padding: 50px 0;
+                h2{
+                    font-size: 30px;
+                }
+                .application-btn{
+                    width: 100%;
+                }
+            }
+        }   
+        .footer-links{
+            .container{
+                .links{
+                    flex-direction: column ;
+                    gap: 50px;  
+                    padding-left: 20px;
+                    .item{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:325px){
+    .header-promo{
+        .container{
+          h1{
+              bottom: -90px;
+              button{
+                width: 90%;
+              }
+          }
+        }
+      }
 }

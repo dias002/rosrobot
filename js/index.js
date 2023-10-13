@@ -33,3 +33,13 @@ function scrollToTop() {
   const scrollToTopButton = document.querySelector('.btn-top-arrow');
 
   scrollToTopButton.addEventListener('click', scrollToTop);
+
+
+
+ const burgerBtn = document.querySelector('.burger-btn')
+ 
+ burgerBtn.addEventListener('click', function(){
+    this.classList.toggle('active-burger')
+    var burgerContent = document.querySelector('.menu-content')
+    burgerContent.classList.toggle('active-burger')
+ })
