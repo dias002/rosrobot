@@ -1390,6 +1390,7 @@ footer{
         h1{
             bottom: -60px;
             font-size: 20px;
+            position: absolute;
             button{
                 left: 50%;
                 transform: translate(-50%, 0);
@@ -1455,6 +1456,7 @@ footer{
         }
     }
     .application{
+        margin-top: 100px;
         .application-box{
             .application-form{
 
@@ -1484,17 +1486,16 @@ footer{
     }
     .robots-benefits{
         margin-top: 350px;
+        top: 0;
         .benefits-cards{
             width: 90%;
             .card-box{
                 display: flex;
                 flex-direction: column;
                 .card{
-
                     margin: 0 auto;
                     p{
-                        height: 70px;
-                        padding: 0 20px;
+                        padding: 30px 20px;
                         text-align: left;
                     }
 
@@ -1551,5 +1552,8 @@ footer{
               }
           }
         }
-      }
+    }
+    .burger-btn{
+        right: 0;
+    }
 }

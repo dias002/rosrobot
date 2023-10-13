@@ -1329,6 +1329,7 @@ footer .footer-links .container .policy {
   .header-promo .container h1 {
     bottom: -60px;
     font-size: 20px;
+    position: absolute;
   }
   .header-promo .container h1 button {
     left: 50%;
@@ -1386,6 +1387,9 @@ footer .footer-links .container .policy {
     flex-direction: row-reverse;
     width: 100%;
   }
+  .application {
+    margin-top: 100px;
+  }
   .application .application-box .application-form .form-block form {
     display: flex;
     flex-direction: column;
@@ -1405,6 +1409,7 @@ footer .footer-links .container .policy {
   }
   .robots-benefits {
     margin-top: 350px;
+    top: 0;
   }
   .robots-benefits .benefits-cards {
     width: 90%;
@@ -1417,8 +1422,7 @@ footer .footer-links .container .policy {
     margin: 0 auto;
   }
   .robots-benefits .benefits-cards .card-box .card p {
-    height: 70px;
-    padding: 0 20px;
+    padding: 30px 20px;
     text-align: left;
   }
   .free-workers .container .cards {
@@ -1454,5 +1458,8 @@ footer .footer-links .container .policy {
   }
   .header-promo .container h1 button {
     width: 90%;
+  }
+  .burger-btn {
+    right: 0;
   }
 }/*# sourceMappingURL=stye.css.map */
