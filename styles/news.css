@@ -2,9 +2,13 @@
     width: 100%;
     border-bottom: solid 1px #90FF03;
 }
+
 main{
     display: flex;
     height: max-content;
+}
+main .block{
+    padding-top: 100px;
 }
 main .block:nth-child(1){
     border: #90FF03 solid 1px;
@@ -26,4 +30,85 @@ footer .footer-application{
 }
 footer .footer-application .btn-top-arrow{
     bottom: 0;
+}
+.card{
+    background-color: aliceblue;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.card h2,p,h3{
+    color: black;
+}
+.card h2{
+    font-size: 40px;
+    line-height: 60px;
+}
+.card h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.card p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 20px;
+}
+.card img{
+    width: 100%;
+    margin-top: 20px;
+}
+.card::before{
+    clip-path: polygon(0% 0%,100% 0%,100% 100%,20% 100%) ;
+    background-color: black;
+    position: absolute;
+    width: 60%;
+    top: -1px;
+    right: -1px;
+    height: 50px;
+    content: '';
+}
+@media (max-width:1024px) {
+    .block-img{
+        display: none;
+    }
+    .block{
+        flex: 1;
+    }
+}
+@media (max-width:600px){
+    .block .container{
+        width: 90%;
+    }
+    .card p{
+        font-size: 13px;
+    }
+    .card h3{
+        font-size: 20px;
+    }
+    .card h2{
+        font-size: 23px;
+    }
+} 
+@media (max-width:375px){
+    .card h3{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:320px){
+    .block .container{
+        width: 95%;
+    }
+    .card p{
+        font-size: 12px;
+    }
+    .card h3{
+        font-size: 16px;
+    }
+    .card h2{
+        font-size: 19px;
+    }
 }
