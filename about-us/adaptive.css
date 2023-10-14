@@ -46,6 +46,12 @@ margin-top: 140px;
 width: 30%;
 display: grid;
 }
+.block p,li{
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+}
 .block img{
     width: 100%;
   }
@@ -101,6 +107,15 @@ display: grid;
     }
     .sct1-title .title1{
         width: 90%;
+    }
+    .sct2-title2 li{
+        margin-left: 20px;
+    }
+    .sct2{
+        margin-top: 50px;
+    }
+    .sct1-img{
+        width: 100%;
     }
 }
 
