@@ -1085,9 +1085,6 @@ footer .footer-links .container .policy {
   .container {
     width: 90%;
   }
-  .navbar {
-    width: 100%;
-  }
   .navbar a:last-child {
     margin-right: 0;
   }

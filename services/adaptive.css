@@ -1,0 +1,119 @@
+
+.nav-wrap{
+    border-bottom: 1px solid #90FF03;
+}
+.service-main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.services-title-block{
+    width: 35%;
+}
+.services{
+    width: fit-content;
+    position: relative;
+}
+.services h2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+.services-card-block{
+    width: 65%;
+}
+.services-card-block .card-block{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+    row-gap: 80px;
+    margin-top: 50px;
+}
+.services-card-block .card-block .card{
+    position: relative;
+    width: fit-content;
+}
+.services-card-block .card-block .card .arrow{
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.services-card-block .card-block .card h2{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.services-img{
+    margin: 0 auto;
+    margin-top: 82px;
+    margin-bottom: 50px;
+    width: 70%;
+}
+.services-img svg{
+    width: 100%;
+}
+
+footer .footer-application{
+    padding: 0;
+}
+@media (max-width:1024px) {
+    .service-main {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .services-card-block{
+        width: 100%;
+    }
+    .services-title-block{
+        width: 100%;
+    }
+}
+@media (max-width:768px){
+    .services-img{
+        width: 95%;
+    }
+    .services-card-block .card-block .card{
+       width: fit-content;
+    }
+    .services-card-block .card-block .card .box g{
+       width: 100%;
+    }
+    .services-card-block .card-block .card .box {
+       width: 100%;
+    }
+    .services-card-block .card-block .card h2{
+        top: 30px;
+    }
+} 
+@media (max-width:500px){
+    .services-card-block .card-block .card h2{
+       left: 50px;
+    }
+    .services-card-block .card-block {
+        grid-template-columns: 1fr;
+    }
+    .services-card-block .card-block .card .arrow{
+        display: block;
+    }
+    .services-img{
+        width: 100%;
+    }
+}
+@media (max-width:320px){
+    .services-title-block{
+        display: none;
+    }
+    .services-img{
+        display: none;
+    }
+    .services-card-block .card-block{
+        margin-bottom: 100px;
+    }
+}
