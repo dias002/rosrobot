@@ -1,0 +1,29 @@
+.nav-wrap{
+    width: 100%;
+    border-bottom: solid 1px #90FF03;
+}
+main{
+    display: flex;
+    height: max-content;
+}
+main .block:nth-child(1){
+    border: #90FF03 solid 1px;
+    width: 36.1%;
+}
+main .block:nth-child(2){
+    border: #90FF03 solid 1px;
+    width: 32%;
+}
+main .block:nth-child(3){
+    border: #90FF03 solid 1px;
+    width: 32%;
+}
+main .block svg{
+    width: 75%;
+}
+footer .footer-application{
+    padding: 0;
+}
+footer .footer-application .btn-top-arrow{
+    bottom: 0;
+}
