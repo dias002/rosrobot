@@ -1,0 +1,149 @@
+body{
+    font-size: 16px;
+}
+
+.nav-wrap{
+    width: 100%;
+    border-bottom: 1px solid #90FF03;
+}
+.sct1{
+    display: flex;
+    justify-content: space-between;
+}
+.sct1-title{
+    width: 60%;
+    margin-top: 121px;
+}
+.sct1-title p{
+    color: #F2F2F2;
+}
+h2{
+    color: #06F;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.sct1-title .title1{
+    margin-top: 160px;
+    width: 60%;
+    display: grid;
+    gap: 20px;
+}
+.sct1-title .title2{
+    margin-top: 152px;
+    display: grid;
+    gap: 20px;
+}
+.sct2-img {
+    gap: 170px;
+}
+.sct2{
+display: flex;
+justify-content: space-between;
+margin-top: 140px;
+}
+.block{
+width: 30%;
+display: grid;
+}
+.block img{
+    width: 100%;
+  }
+  .sct1-img{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:1024px) {
+    .sct1-title{
+        width: 80%;
+        margin-top: 121px;
+    }
+    .sct1-title .title1{
+        margin-top: 50px;
+    }
+    .sct1-title .title2{
+        margin-top: 50px;
+    }
+    .sct2-img {
+        gap: 0;
+    }
+}
+@media (max-width:768px) {
+    .sct1-title{
+        width: 100%;
+    }
+    .sct1-img{
+        position: absolute;
+        right: 10px;
+    }
+    .sct2{
+        flex-direction: column-reverse;
+        gap: 100px;
+    }
+    .block{
+        width: 100%;
+    }
+    .sct2-img img:first-child{
+        display: none;
+    }
+}
+@media (max-width:425px){
+    .sct1-title{
+        margin-top: 30px;
+    }
+    .sct1{
+        flex-direction: column-reverse;
+    }
+    .sct1-img{
+        position: unset;
+        width: 90%;
+    }
+    .sct1-title .title1{
+        width: 90%;
+    }
+}
+
+
+.sct1-img svg{
+    width: 100%;
+}
+@keyframes changeColor {
+    0% {
+      stop-color: #0066FF;
+    }
+    50% {
+      stop-color: #90FF03;
+    }
+    100% {
+      stop-color: #0066FF;
+    }
+  }
+  
+  /* Применение анимации к stop */
+  stop {
+    animation: changeColor 10s linear infinite;
+  }
+
+
+  .block:nth-child(3){
+    display: block;
+  }
+
+  .sct2-title{
+    gap: 50px;
+  }
+  .sct2-title .title{
+    gap: 20px;
+    display: grid;
+  }
+
+  .sct2-title2 ol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 50px;
+  }
+
+  
+ 
