@@ -1406,7 +1406,7 @@ footer .footer-links .container .policy {
     margin: 0 auto;
   }
   .robots-benefits {
-    margin-top: 350px;
+    margin-top: 400px;
     top: 0;
   }
   .robots-benefits .benefits-cards {
@@ -1431,6 +1431,9 @@ footer .footer-links .container .policy {
   }
   .free-workers .container .cards .card {
     width: 100%;
+  }
+  footer {
+    margin-top: 200px;
   }
   footer .footer-application .application-box {
     padding: 50px 0;
