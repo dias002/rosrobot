@@ -48,10 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
     svg.classList.add("animated");
   });
+  
+  
+  
   var logoElement = document.querySelector(".logo");
-
-
   logoElement.addEventListener("click", function() {
 
-    window.location.href = "../index.html";
+    try {
+      window.location.href = "../index.html";
+    } catch (error) {
+      console.error("Произошла ошибка:", error);
+    }
   });
