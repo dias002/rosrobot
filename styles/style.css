@@ -1113,7 +1113,7 @@ footer .footer-links .container .policy {
     width: 50%;
   }
   .about-us .about-us-box .accordion-about-us {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .header-promo {
@@ -1225,7 +1225,7 @@ footer .footer-links .container .policy {
     width: 100%;
   }
   .free-workers {
-    margin-top: 100px;
+    margin-top: 200px;
   }
   .free-workers .workers-title {
     text-align: center;
