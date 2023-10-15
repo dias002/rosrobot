@@ -98,7 +98,7 @@ h1 {
   width: 50px;
   height: 50px;
   display: none;
-  z-index: 40;
+  z-index: 100;
 }
 .burger-btn span {
   transition: 0.4s;
@@ -122,7 +122,7 @@ h1 {
   height: 100%;
   transition: 0.4s;
   position: fixed;
-  z-index: 10;
+  z-index: 60;
   right: 0;
   top: 0;
 }
@@ -1463,4 +1463,4 @@ footer .footer-links .container .policy {
   .burger-btn {
     right: 0;
   }
-}/*# sourceMappingURL=stye.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,228 @@
+.contacts-title{
+    margin: 100px auto;
+    width: fit-content;
+}
+
+.block{
+    display: grid;
+    width: 32%;
+}
+.block svg{
+    width: 100%;
+}
+.contacts-info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+.img-block{
+    gap: 150px;
+}
+.addreses {
+    gap: 60px;
+}
+.addreses h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+.addreses h2{
+    color: #06F;
+}
+.addres{
+    gap: 5px;
+    display: grid;
+}
+
+.block svg:nth-child(1) path {
+animation: flash 8s; 
+}
+
+@keyframes flash {
+0% {
+    fill: #000000; 
+}
+100% {
+    fill: #90FF03; 
+}
+}
+main{
+    position: relative;
+}
+.rpa-bottom {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    .rpa-bottom .plus {
+    content: "";
+    height: 5px;
+    width: 56px;
+    position: absolute;
+    background-color: #90FF03;
+    right: 0;
+  }
+    .rpa-bottom .plus:nth-child(2) {
+    left: 0;
+  }
+    .rpa-bottom .plus::after {
+    content: "";
+    height: 5px;
+    width: 56px;
+    position: absolute;
+    background-color: #90FF03;
+    transform: rotate(90deg);
+  }
+    .rpa-bottom .line {
+    height: 1px;
+    background-color: #F2F2F2;
+    width: 90%;
+  }
+  .rekvizits-block{
+    gap: 140px;
+  }
+  .rekvizits-block .addres h3{
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .rekvizits-block .addres{
+    gap: 10px;
+  }
+  .rekvizits{
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .rekvizits::before{
+    clip-path: polygon(0% 0%,100% 0%,100% 100%,20% 100%);
+    background-color: black;
+    position: absolute;
+    width: 50%;
+    top: -1px;
+    right: -1px;
+    height: 50px;
+    content: '';
+}
+.background{
+    position: absolute;
+    left: 0;
+    transform: translate(-33%, 20%);
+    z-index: 1;
+    bottom: 0;
+}
+.rekvizits h2{
+    color: #000000; 
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left:20px;
+}
+.rekvizits p{
+    color: #000000;
+}
+.application-form{
+    margin-top: 150px;
+    
+}
+.form-block{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: right;
+    background-image: url(../img/from-img.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+
+.form-block form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 30px;
+    background-color: rgb(226, 226, 226, 0.5);
+}
+.form-block form input{
+    padding: 20px 0;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    color: black;
+    background-color: transparent;
+    outline: none;
+    margin-top: 30px;
+
+}
+ ::placeholder{
+    color: #000000;
+}
+.form-block form #radio-btn{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+.form-block form button{
+    border-radius: 30px;
+    padding: 15px 0;
+    margin:  20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 50px;
+    background-color: #90FF03;
+    border: none;
+    color: #000000;
+}
+.form-block form p{
+    color: #F2F2F2;
+    display: flex;
+    text-decoration: underline;
+    height: fit-content;
+    align-items: center;
+    gap: 20px;
+}
+footer .footer-application{
+    padding: 50px 0;
+}
+@media (max-width:768px) {
+    .img-block svg:last-child{
+        display: none;
+    }
+    .contacts-info {
+       flex-direction: column;
+       gap: 100px;
+    }
+    .contacts-info  .block {
+        width: 100%;
+    }
+    .rekvizits-block{
+        gap: 50px;
+        display: flex;
+    }
+    .rekvizits-block .addres{
+        gap: 20px;
+    }
+}
+@media (max-width:550px){
+    .rekvizits-block{
+        flex-direction: column;
+    }
+    .form-block form #radio-btn{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width:320px){
+    main{
+        text-align: center;
+    }
+}
+  

@@ -40,4 +40,12 @@ accordionItems.forEach(item => {
 
   const scrollToTopButton = document.querySelector('.btn-top-arrow');
 
-    scrollToTopButton.addEventListener('click', scrollToTop);
+scrollToTopButton.addEventListener('click', scrollToTop);
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const svg = document.getElementById("animated-svg");
+  
+    svg.classList.add("animated");
+  });
+  
