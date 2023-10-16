@@ -44,10 +44,10 @@ scrollToTopButton.addEventListener('click', scrollToTop);
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const svg = document.getElementById("animated-svg");
-  
+  const svg = document.getElementById("animated-svg");
+
     svg.classList.add("animated");
-  });
+});
   
   
   
@@ -60,3 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Произошла ошибка:", error);
     }
   });
+
+
+
+const popup = document.getElementById('popup');
+const overlay = document.getElementById('overlay');
+const popupBtn = document.getElementById('openPopUp');
+
+
+popupBtn.addEventListener('click', function(){
+  popup.classList.add('open-popup')
+})
+overlay.addEventListener('click', function(){
+  popup.classList.remove('open-popup')
+})
+
+
+
+
+

@@ -18,7 +18,7 @@
             <a href="services.html">Услуги</a>
             <a href="news.html">Новости</a>
             <a href="contact.html">Контакты</a>
-            <a href="">Оставить заявку
+            <a id="openPopUp">Оставить заявку
                 <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group 166">
                         <g id="Group 28">
@@ -42,6 +42,22 @@
             <a href="services.html">Услуги</a>
             <a href="news.html">Новости</a>
             <a href="contact.html">Контакты</a>
+        </div>
+    </div>
+    <div class="pop-up" id="popup">
+        <div class="blur" id="overlay"></div>
+        <div class="registr-window">
+                <div class="form-block">
+                    <form>
+                        <input placeholder="Имя" type="text" required>
+                        <input placeholder="Телефон" type="number" required>
+                        <input placeholder="Название Компании" type="text" required>
+                        
+                        <button class="application-btn" type="submit">Оставить заявку</button>
+                        <p> <input type="radio" name="radio-group" id="radio-btn" required>Даю согласие на обработку
+                            персональных данных</p>
+                    </form>
+            </div>
         </div>
     </div>
     <main class="container">
@@ -1006,7 +1022,7 @@
                         <a href="">linkedin</a>
                     </div>
                 </div>
-                <a href="" class="policy">
+                <a href="policy.html" class="policy">
                     Политика конфиденциальности © 2023 РОСРОБОТ.<br>
                     Все права защищены.
                 </a>

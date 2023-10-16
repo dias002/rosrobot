@@ -52,6 +52,97 @@ h1 {
     line-height: 120%;
     text-transform: uppercase;
 }
+.pop-up{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    .blur{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0, .3);
+    }
+    .registr-window{
+        width: 50%;
+        height: 60%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+        position: relative;
+        .form-block{
+            width: 70%;
+            background-image: none;
+            form {
+                display: grid;
+                gap: 40px;
+                input {
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid #0F0F0F;
+                    outline: none;
+                    color: #9E9E9E;
+                }
+                button {
+                    color: #0F0F0F;
+                    background-color: #9E9E9E;
+                    border: none;
+                    height: 40px;
+                    cursor: pointer;
+                    transition: .3s;
+    
+                    &:hover {
+                        transition: .3s;
+                        background-color: #90FF03;
+    
+                    }
+                }
+    
+                p {
+                    color: #0F0F0F;
+                    font-size: 14px;
+                    text-decoration: underline;
+                    display: flex;
+                    align-items: center;
+                    height: 20px;
+                    input[type="radio"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        border: none;
+                        outline: none;
+                        width: 15px;
+                        height: 15px;
+                        background-color: #fff;
+                        border: 1px solid #000;
+                        border-radius: 0;
+                        cursor: pointer;
+                        margin-bottom: 0;
+                        margin-right: 5px;
+                        
+                        &:checked {
+                            background-color: #90FF03;
+                            color: #fff;
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+
+}.open-popup{
+    display: flex;
+}
 // Header
 .navbar {
     display: flex;
@@ -1058,6 +1149,18 @@ footer{
         }
     }
 }
+.title-policy{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin-top: 100px;
+    padding-right: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    p{
+        width: 70%;
+    }
+}
 @media (max-width:1024px){
     .free-workers{
         .workers-title{
@@ -1339,6 +1442,11 @@ footer{
             }
         }
     }
+    .pop-up{
+        .registr-window{
+            height: 70%;
+        }
+    }
     .robots-benefits{
         height: auto;
         position: unset;
@@ -1485,6 +1593,28 @@ footer{
             margin: 0 auto;
         }
     }
+    .pop-up{
+        .registr-window{
+            width: 90%;
+            height: 70%;
+            .form-block{
+                width: 90%;
+                form {
+                    display: grid;
+                    gap: 40px;
+                    
+                    p {
+                        input[type="radio"] {
+                            width: 25px;
+                            height: 20px;
+                        }
+        
+                    }
+                }
+            }
+        }
+    
+    }
     .robots-benefits{
         margin-top: 400px;
         top: 0;
@@ -1543,6 +1673,13 @@ footer{
             }
         }
     }
+    .title-policy{
+        padding: 0;
+        justify-content: center;
+        p{
+            width: 95%;
+        }
+    }
 }
 @media (max-width:325px){
     .header-promo{
@@ -1557,5 +1694,12 @@ footer{
     }
     .burger-btn{
         right: 0;
+    }
+    .pop-up{
+        .registr-window{
+            width: 95%;
+            height: 70%;
+        }
+    
     }
 }
